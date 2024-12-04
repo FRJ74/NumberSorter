@@ -8,7 +8,7 @@ const sortInputArray = (event) => {
   const inputValues = [
     ...document.getElementsByClassName("values-dropdown")
   ].map((dropdown) => Number(dropdown.value));
-  const sortedValues = insertionSort(inputValues);
+  const sortedValues = inputValues.sort((a,b) => {});
 
   updateUI(sortedValues);
 }
@@ -60,7 +60,7 @@ const updateUI = (array = []) => {
       }
       array[j+1] = currValue;
     }
-
+    return array;
   }
 
   sortButton.addEventListener("click", sortInputArray);
